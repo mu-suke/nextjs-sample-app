@@ -5,6 +5,7 @@ import { CreateButton } from "../components/recoil/createButton"
 import { MemoItem } from "../components/recoil/memoItem"
 import { notePadAtom } from "../constants/notepad"
 import { Container } from "@chakra-ui/react"
+import Link from "next/link"
 
 const Recoil: NextPage = () => {
   // Recoilの Atoms を呼び出して定義
@@ -42,6 +43,8 @@ const Recoil: NextPage = () => {
     },
     [memos, setNotepad]
   )
+  console.log("memos: ", memos)
+
   return (
     <>
       <Container maxW="container.md" marginY="16px">
@@ -56,6 +59,7 @@ const Recoil: NextPage = () => {
         <div className="button_area">
           <CreateButton clickHandler={handleCreate} />
         </div>
+        <Link href="/recoilResult">リンク</Link>
       </Container>
     </>
   )
