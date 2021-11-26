@@ -4,7 +4,7 @@ import React from "react"
 import { useQuery } from "react-query"
 import axios from "axios"
 
-const Todos: NextPage = () => {
+const ReactQuery: NextPage = () => {
   const query = "nextjs"
 
   const { data, isLoading } = useQuery("qiita", async () => {
@@ -37,4 +37,4 @@ const Todos: NextPage = () => {
   )
 }
 
-export default Todos
+export default ReactQuery
