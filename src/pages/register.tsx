@@ -6,7 +6,7 @@ import React, { useState } from "react"
 
 const Register: NextPage = () => {
   const router = useRouter()
-  const steps: Step[] = [{ label: "基本情報" }, { label: "プロフィール" }]
+  const steps: Step[] = [{ label: "Step 1" }, { label: "Step 2" }]
   const [activeStep, setActiveStep] = useState<number>(0)
   const handleNext = () => {
     setActiveStep(activeStep + 1)
@@ -20,7 +20,7 @@ const Register: NextPage = () => {
   return (
     <Container maxW="container.md" paddingY="4rem">
       <Steps activeStep={activeStep} steps={steps} />
-      {/* 新規登録とは関係ないstepper用のUI */}
+
       <Text marginTop="2rem" textAlign="center">
         activeStep: {activeStep}
       </Text>
